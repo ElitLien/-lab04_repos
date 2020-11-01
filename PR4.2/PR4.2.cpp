@@ -10,8 +10,8 @@ int main()
 	cout << "dx = "; cin >> dx;
 	cout << fixed;
 	cout << "---------------------------" << endl;
-	cout << "|" << setw(5) << "x" << " |"
-		<< setw(7) << "y" << " |" << endl;
+	cout << "|" << setw(7) << "x" << " |"
+		<< setw(10) << "y" << " |" << endl;
 	cout << "---------------------------" << endl;
 	x = xp;
 	while (x <= xk)
@@ -21,9 +21,9 @@ int main()
 			B = exp( 2 + x );
 		else
 			if (x >= 1)
-				B = ( cos( x )*cos( x ))/ 1 + fabs( sin(x) );
+				B = ( cos( x )*cos( x ))/ (1 + fabs( sin(x) ));
 			else
-				B = sin( 1 /fabs( 2 + x ))* sin( 1 / fabs( 2 + x ));
+				B = (sin( 1 /(fabs( 2 + x ))))* (sin( 1 / (fabs( 2 + x ))));
 		y = A + B;
 		cout << "|" << setw(7) << setprecision(2) << x
 			<< " |" << setw(10) << setprecision(3) << y
